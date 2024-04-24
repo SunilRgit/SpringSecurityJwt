@@ -1,0 +1,386 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script th:src="@{/hisglobal/js/registration/employeeRegistration.js}"></script>
+
+	<style>
+		.btn-primary {
+			background: #844fc1 !important;
+			border-color: #844fc1 !important;
+			padding: 0.675rem 1.5rem;
+			border-radius: 3px;
+		}
+
+		.btn-inverse-dark {
+			padding: 0.675rem 1.5rem !important;
+			border-radius: 3px !important;
+		}
+
+		.buttonDiv {
+			text-align: center;
+			margin-top: 10px;
+		}
+	</style>
+
+</head>
+
+<body>
+	<div class="col-12 grid-margin stretch-card">
+		<div class="card">
+			<div class="card-body">
+				<h4 class="card-title">Employee Registration</h4>
+
+				<ul class="nav nav-tabs" role="tablist">
+					<li class="nav-item" role="presentation">
+						<a class="nav-link active" id="simple-tab-0" data-bs-toggle="tab" href="#simple-tabpanel-0"
+							role="tab" aria-controls="simple-tabpanel-0" aria-selected="true">Personal Details</a>
+					</li>
+					<li class="nav-item" role="presentation">
+						<a class="nav-link" id="simple-tab-1" data-bs-toggle="tab" href="#simple-tabpanel-1" role="tab"
+							aria-controls="simple-tabpanel-1" aria-selected="false">Post Details</a>
+					</li>
+
+				</ul>
+
+				<!-- Common form -->
+				<form id="common-form" class="forms-sample">
+					<div class="tab-content pt-5" id="tab-content">
+						<div class="tab-pane active" id="simple-tabpanel-0" role="tabpanel"
+							aria-labelledby="simple-tab-0">
+							<div class="row">
+								<div class="col-md-4">
+									<div class="form-group row">
+										<label class="col-sm-5 col-form-label">
+											<font color="red">*</font>Appellation
+										</label>
+										<div class="col-sm-7">
+											<select class="form-control" id="gnumAppellationCode1"
+												name="gnumAppellationCode1">
+												<!-- Add options here -->
+											</select>
+										</div>
+									</div>
+								</div>
+								<div class="col-md-4">
+									<div class="form-group row">
+										<label class="col-sm-5 col-form-label">Suffix</label>
+										<div class="col-sm-7">
+											<select class="form-control" id="gnumSuffixCode">
+												<!-- Add options here -->
+											</select>
+										</div>
+									</div>
+								</div>
+								<div class="col-md-4">
+									<div class="form-group row">
+										<label class="col-sm-5 col-form-label">Old Employee No.</label>
+										<div class="col-sm-7">
+											<input type="text" class="form-control">
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="row">
+								<div class="col-md-4">
+									<div class="form-group row">
+										<label class="col-sm-5 col-form-label">
+											<font color="red">*</font>First Name
+										</label>
+										<div class="col-sm-7">
+											<input type="text" class="form-control">
+										</div>
+									</div>
+								</div>
+								<div class="col-md-4">
+									<div class="form-group row">
+										<label class="col-sm-5 col-form-label">Middle Name</label>
+										<div class="col-sm-7">
+											<input type="text" class="form-control">
+										</div>
+									</div>
+								</div>
+								<div class="col-md-4">
+									<div class="form-group row">
+										<label class="col-sm-5 col-form-label">
+											<font color="red">*</font>Last Name
+										</label>
+										<div class="col-sm-7">
+											<input type="text" class="form-control">
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="row">
+								<div class="col-md-8">
+									<div class="form-group row">
+										<label class="col-sm-2 col-form-label">Full Name</label>
+										<div class="col-sm-5 ps-5">
+											<input type="text" class="form-control">
+										</div>
+										<div class="col-sm-5 ps-1">
+											<input type="text" class="form-control">
+										</div>
+									</div>
+								</div>
+
+								<div class="col-md-4">
+									<div class="form-group row">
+										<label class="col-sm-5 col-form-label">
+											<font color="red">*</font>Date of Birth
+										</label>
+										<div class="col-sm-7">
+											<input type="text" class="form-control">
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="row">
+								<div class="col-md-4">
+									<div class="form-group row">
+										<label class="col-sm-5 col-form-label">
+											<font color="red">*</font>Gender
+										</label>
+										<div class="col-sm-7">
+											<select class="form-control" id="gstrGenderCode" name="gstrGenderCode">
+												<!-- Add options here -->
+											</select>
+										</div>
+									</div>
+								</div>
+								<div class="col-md-4">
+									<div class="form-group row">
+										<label class="col-sm-5 col-form-label">
+											<font color="red">*</font>Nationality
+										</label>
+										<div class="col-sm-7">
+											<select class="form-control" id="gnumNationalityCode"
+												name="gnumNationalityCode">
+												<!-- Add options here -->
+											</select>
+										</div>
+									</div>
+								</div>
+								<div class="col-md-4">
+									<div class="form-group row">
+										<label class="col-sm-5 col-form-label">Aadhar</label>
+										<div class="col-sm-7">
+											<input type="text" class="form-control">
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-md-4">
+									<div class="form-group row">
+										<label class="col-sm-5 col-form-label">
+											<font color="red">*</font>Mobile No.
+										</label>
+										<div class="col-sm-7">
+											<input type="text" class="form-control">
+										</div>
+									</div>
+								</div>
+								<div class="col-md-4">
+									<div class="form-group row">
+										<label class="col-sm-5 col-form-label">
+											<font color="red">*</font>Email
+										</label>
+										<div class="col-sm-7">
+											<input type="text" class="form-control">
+										</div>
+									</div>
+								</div>
+								<div class="col-md-4">
+									<div class="form-group row">
+										<label class="col-sm-5 col-form-label">PAN No.</label>
+										<div class="col-sm-7">
+											<input type="text" class="form-control">
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="tab-pane" id="simple-tabpanel-1" role="tabpanel" aria-labelledby="simple-tab-1">
+							<div class="row">
+								<div class="col-md-6">
+									<div class="form-group row">
+										<label class="col-sm-5 col-form-label">
+											<font color="red">*</font>Fund Type
+										</label>
+										<div class="col-sm-7">
+											<select class="form-control" id="gnumNationalityCode"
+												name="gnumNationalityCode">
+												<option value="101">Government Funded Staff</option>
+												<option value="102">University Funded Staff</option>
+											</select>
+										</div>
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="form-group row">
+										<label class="col-sm-5 col-form-label">Order Type</label>
+										<div class="col-sm-7">
+											<select class="form-control" id="sstnumOrderTypeId"
+												name="sstnumOrderTypeId">
+											</select>
+										</div>
+									</div>
+								</div>
+
+							</div>
+							<div class="row">
+								<div class="col-md-6">
+									<div class="form-group row">
+										<label class="col-sm-5 col-form-label">
+											<font color="red">*</font>Teaching/Non Teaching
+										</label>
+										<div class="col-sm-7">
+											<select id="gnumTeachingType" name="gnumTeachingType" tabindex="1"
+												class="form-control">
+												<option value="201">Non-Teaching</option>
+												<option value="202">Teaching</option>
+											</select>
+										</div>
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="form-group row">
+										<label class="col-sm-5 col-form-label">University Approval No.</label>
+										<div class="col-sm-7">
+											<input type="text" class="form-control">
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-md-6">
+									<div class="form-group row">
+										<label class="col-sm-5 col-form-label">
+											<font color="red">*</font>Pay Category
+										</label>
+										<div class="col-sm-7">
+											<form:select id="sstnumPayCategoryId" path="sstnumPayCategoryId"
+												tabindex="1" cssClass="form-control"
+												value="${memRegistrationBean.sstnumPayCategoryId}">
+												${payCategoryCombo}
+											</form:select>
+										</div>
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="form-group row">
+										<label class="col-sm-5 col-form-label">
+											<font color="red">*</font>Appointment Type
+										</label>
+										<div class="col-sm-7">
+											<input type="text" class="form-control">
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-md-6">
+									<div class="form-group row">
+										<label class="col-sm-5 col-form-label">Appointment End Date</label>
+										<div class="col-sm-7">
+											<input type="text" class="form-control">
+										</div>
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="form-group row">
+										<label class="col-sm-5 col-form-label">Appointment Order</label>
+										<div class="col-sm-7">
+											<input type="text" class="form-control">
+										</div>
+									</div>
+								</div>
+
+							</div>
+							<div class="row">
+								<div class="col-md-6">
+									<div class="form-group row">
+										<label class="col-sm-5 col-form-label">
+											<font color="red">*</font>Recruitment Type
+										</label>
+										<div class="col-sm-7">
+											<input type="text" class="form-control">
+										</div>
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="form-group row">
+										<label class="col-sm-5 col-form-label">
+											<font color="red">*</font>Service Group
+										</label>
+										<div class="col-sm-7">
+											<input type="text" class="form-control">
+										</div>
+									</div>
+								</div>
+
+							</div>
+							<div class="row">
+								<div class="col-md-6">
+									<div class="form-group row">
+										<label class="col-sm-5 col-form-label">
+											<font color="red">*</font>Department
+										</label>
+										<div class="col-sm-7">
+											<input type="text" class="form-control">
+										</div>
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="form-group row">
+										<label class="col-sm-5 col-form-label">
+											<font color="red">*</font>Designation
+										</label>
+										<div class="col-sm-7">
+											<input type="text" class="form-control">
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-md-6">
+									<div class="form-group row">
+										<label class="col-sm-5 col-form-label">Horizontal Reservation</label>
+										<div class="col-sm-7">
+											<input type="text" class="form-control">
+										</div>
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="form-group row">
+										<label class="col-sm-5 col-form-label">Vertical Reservation</label>
+										<div class="col-sm-7">
+											<input type="text" class="form-control">
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+					</div>
+
+					<div class="buttonDiv">
+						<!-- Save button -->
+						<a href="" class="btn btn-primary" id="save" tabindex="1" onclick="onSaveButtonClick()">Save</a>
+
+						<button type="reset" id="clear" class='btn btn-inverse-dark btn-fw' tabindex="1">Reset</button>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</body>
+
+</html>

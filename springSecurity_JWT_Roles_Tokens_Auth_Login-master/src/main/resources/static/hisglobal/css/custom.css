@@ -1,0 +1,46 @@
+.refreshIcon {
+	position: absolute;
+	top: 35%;
+	transform: translateY(-50%);
+	right: 4px;
+	font-size: 30px;
+	cursor: poiter;
+}
+
+.pointer {
+	cursor: pointer;
+}
+
+.panel,
+.panel-body,
+.tabs-wrap {
+	width: 100% !important;
+}
+
+.navbar-nav {
+	flex-direction: unset !important;
+}
+
+.captcha {
+	width: 10% !important;
+	margin-left: 10px;
+	border-radius: 4px;
+}
+
+@font-face {
+	font-family: 'password';
+	font-style: normal;
+	font-weight: 400;
+	src: url(password.ttf);
+}
+
+.passwordHide {
+	font-family: 'password';
+	letter-spacing: 2px;
+	/* Adjust as needed */
+}
+
+.passwordHide.placeholder {
+	font-family: inherit;
+	letter-spacing: inherit;
+}
